@@ -1,0 +1,35 @@
+[versions]
+androidGradlePlugin = "8.1.0"
+androidLibrary = "8.1.0"
+kotlinAndroid = "1.9.0"
+androidxComposeCompiler = "1.5.0"
+
+coreKtx = "1.10.1"
+splashScreen = "1.0.1"
+activityCompose = "1.7.2"
+composeBOM = "2023.08.00"
+tvFoundation = "1.0.0-alpha08"
+tvMaterial = "1.0.0-alpha08"
+
+
+[libraries]
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+androidx-splashScreen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen"}
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBOM" }
+ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+
+tv-foundation = { module = "androidx.tv:tv-foundation", version.ref = "tvFoundation" }
+tv-material = { module = "androidx.tv:tv-material", version.ref = "tvMaterial" }
+
+
+[bundles]
+androidx-compose-bom = ["compose-bom", "ui-tooling"]
+androidx-tv-compose = ["tv-foundation", "tv-material"]
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidLibrary" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinAndroid" }
